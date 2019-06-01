@@ -11,7 +11,7 @@ ballots = [{'gold': 'Smudge', 'silver': 'Tigger', 'bronze': 'Simba'},
 
 
 #make an list and default to 0.
-votes = {
+participants = {
     'Smudge': 0,
     'Tigger': 0,
     'Simba': 0,
@@ -25,10 +25,10 @@ votes = {
 for x in ballots:
     for key, value in ballot.items():
         if key == 'gold':
-            votes[value] += 3
+            participants[value] += 3
         elif key == 'silver':
-            votes[value] += 2
+            participants[value] += 2
         elif key == 'bronze':
-            votes[value] += 1
-winner = max(votes, key=votes.get)
+            participants[value] += 1
+winner = max(participants, key=participants.get)
 print(winner)
